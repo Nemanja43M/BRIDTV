@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+.app-container {
+  width: 100%;
+  background: linear-gradient(
+    to right bottom,
+    #f78da7,
+    #cf2e2e,
+    #fcb900,
+    #61ce70
+  );
+}
+.heading {
+  cursor: pointer;
+}
+
+.top-header {
+  height: 6rem;
+  background: linear-gradient(to right bottom, #6ec1e4, #61ce70);
+}
+
+.header {
+  height: 9rem;
+  background-color: black;
+}
+
+.logo {
+  margin-top: 3rem;
+  width: 451px;
+  height: 30px;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  grid-gap: 2rem;
+  margin: 2rem;
+}
+.container .heading {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  margin: 2rem 0;
+  text-transform: capitalize;
+  color: var(--purple);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.2rem;
+  text-align: center;
+  text-shadow: 0 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+}
+
+.video-container {
+  display: grid;
+  justify-content: center;
+  text-align: center;
+}
+
+.video-container .video {
+  height: 15rem;
+  width: 100%;
+  margin: 2rem 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 1.5);
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 1rem solid black;
+}
+
+.video-container .video video {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  transition: 0.2s linear;
+}
+
+.video-container .video:hover video {
+  transform: scale(1.3);
+}
+
+.brid {
+  margin-left: 200px;
+}
+
+.player-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+  .box {
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+
+    .video-container .video {
+      width: 100%;
+      margin: 1rem 0;
+    }
+  }
+}
+@media screen and (max-width: 768px) {
+  .box {
+    display: block;
+    margin: 1rem;
+  }
+
+  .video-container .video {
+    width: 100%;
+    margin: 1rem 0;
+  }
+
+  .video-container .video video:hover {
+    transform: none;
+  }
+  .header {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-color: black;
+  }
+
+  .logo {
+    margin-top: 0;
+  }
+  .player-wrapper {
+    width: 100%;
+    max-width: 100%;
+    padding: 0 1rem;
+  }
+}
+@media screen and (min-width: 769px) {
+  .box {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
